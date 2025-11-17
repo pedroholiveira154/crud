@@ -1,0 +1,17 @@
+{
+  "pessoas": [
+    {
+      "nome": "Pedro",
+      "sobrenome": "Oliveira",
+      "cpf": "46483515847",
+      "email": "pedrohenriiqueoh@gmail.com",
+      "senha": "1234",
+      "rua": "Hildebrando Fernandes",
+      "cep": "08746-125",
+      "cidade": "Mogi das Cruzes",
+      "estado": "SP",
+      "telefone": "(11)920092783",
+      "id": 1
+    }
+  ]
+}
