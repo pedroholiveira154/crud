@@ -1,5 +1,5 @@
 function deletarDados() {
-    var cpf = document.getElementById('CPF').value;
+    var cpf = document.getElementById('CPF').value.trim();
 
     fetch('http://localhost:3000/pessoas')
         .then(response => response.json())
@@ -21,4 +21,5 @@ function deletarDados() {
                 alert('CPF não encontrado.');
             }
         });
+
 }
