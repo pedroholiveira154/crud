@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+    <!-- <link rel="stylesheet" href="_css/put.css"> -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('../images/fundo.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vw 100vh
+        }
+
+        center {
+            width: 100%;
+        }
+
+        @font-face{
+            font-family: 'Motiva';
+            src: url(../motiva-sans.zip) format('woff');
+        }
+        h1 {
+            color: #ffffff;
+            margin-top: 40px;
+            font-family: 'Motiva', sans-serif;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            /* text-align: left; */
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"] {
+            width: 250px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button,
+        input[type="button"] {
+            background-color: #791ce4;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        button:hover,
+        input[type="button"]:hover {
+            background-color: #9a46fa;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table td,
+        table th {
+            border: 1px solid #0000008c;
+            padding: 10px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #791ce4;
+            color: white;
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            margin: 15px;
+            text-decoration: none;
+            background: #7415e0;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        a:hover {
+            background: #8d3de9;
+        }
+
+        input:focus {
+            border-color: #9226d1;
+            outline: none;
+        }
+
+        /*
+        button {
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #aa20e0, #eb06c4);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        } 
+
+                button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+        */
+
+        div#escurecer {
+            overflow: hidden;
+            height: 100%;
+            width: 100vw;
+            background-color: #3403506b;
+        }
+
+        header {
+            background-color: rgb(255, 0, 255);
+            background: linear-gradient(180deg, rgb(183, 2, 255), rgb(245, 1, 245));
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+            flex: 1;
+            height: 8vh;
+        }
+    </style>
+    <script src="put.js"></script>
+</head>
+<div id="escurecer">
+    <header></header>
+
+    <body>
+        <center>
+            <h1>PUT</h1>
+            <form>
+                <label>ID:</label><br>
+                <input type="text" id="identificador" disabled>
+                <br><br>
+                <label>CPF:</label><br>
+                <input type="text" id="identificadorCPF">
+                <br><br>
+                <label>Nome:</label><br>
+                <input type="text" id="nomeAtualizar">
+                <br><br>
+                <label>Sobrenome:</label><br>
+                <input type="text" id="sobrenomeAtualizar">
+                <br><br>
+                <label>Email:</label><br>
+                <input type="text" id="emailAtualizar">
+                <br><br>
+                <label>Senha:</label><br>
+                <input type="password" id="senhaAtualizar">
+                <br><br>
+                <label>Rua:</label><br>
+                <input type="text" id="ruaAtualizar">
+                <br><br>
+                <label>CEP:</label><br>
+                <input type="text" id="cepAtualizar">
+                <br><br>
+                <label>Cidade:</label><br>
+                <input type="text" id="cidadeAtualizar">
+                <br><br>
+                <label>Estado:</label><br>
+                <input type="text" id="estadoAtualizar">
+                <br><br>
+                <label>Telefone:</label><br>
+                <input type="text" id="telefoneAtualizar">
+                <br><br>
+                <button onclick="atualizarDados()">Atualizar</button>
+                <button type="button" onclick="buscarDados()">Buscar</button>
+            </form>
+
+            <!-- GET -->
+            <h1>Cadastrados</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>Id:</td>
+                        <td>Nome:</td>
+                        <td>Sobrenome:</td>
+                        <td>CPF:</td>
+                        <td>Email:</td>
+                        <td>Senha:</td>
+                        <td>Rua:</td>
+                        <td>CEP:</td>
+                        <td>Cidade:</td>
+                        <td>Estado:</td>
+                        <td>Telefone:</td>
+                    </tr>
+                </thead>
+                <tbody id="tabela-corpo"></tbody>
+            </table>
+            <p id="mensagem-vazia"
+                style="display:none; font-size:18px; color:#555; margin-top:10px; text-align:center;">
+                Não existe nenhum cadastro.
+            </p>
+
+
+            <!-- DELETE -->
+            <h1>Delete</h1>
+            <form>
+                <label>CPF:</label>
+                <input type="text" id="CPF">
+                <input type="button" onclick="deletarDados()" value="Deletar">
+            </form>
+
+            <a href="../pages/bemVindo.html">Voltar</a>
+            <script src="../script/put.js"></script>
+            <script src="../script/delete.js"></script>
+            <script src="../script/get.js"></script>
+        </center>
+    </body>
+</div>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Mundo dos Jogos!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('../images/fundo.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vw 100vh
+        }
+
+        @font-face{
+            font-family: 'Motiva';
+            src: url(../motiva-sans.zip) format('woff');
+        }
+        h1 {
+            text-align: center;
+            margin-top: 80px;
+            font-family: 'Motiva', sans-serif;
+            font-size: 80px;
+            font-weight: 400;
+            color: #ffffff;
+            text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        form {
+            background: rgba(65, 62, 62, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid #cd1fd3;
+            font-family: "Motiva", sans-serif;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        header{
+            height: 9vh;
+            font-family: "Motiva", sans-serif;
+        }
+        header input {
+            width: 180px;
+            padding: 9px 12px 9px 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ff3be5;
+            border-radius: 10px;
+            background: #f9f9f9;
+            color: #333333;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            font-family: "Motiva", sans-serif;
+        }
+
+        header input:focus {
+            border-color: #9226d1;
+            outline: none;
+        }
+
+        header button {
+            padding: 10px 30px;
+            background: linear-gradient(45deg, #9944b8, #cc2ab1);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+            font-family: "Motiva", sans-serif;
+        }
+
+        header button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        a {
+            text-align: left;
+            color: #e204ff;
+            text-decoration: none;
+            display: block;
+            margin: 0px 0px 20px 10px;
+            font-weight: bold;
+            font-size: 17px;
+            transition: 0.2s;
+        }
+
+        a:hover {
+            text-decoration: none;
+            text-shadow: 10px 5px 15px rgb(255, 0, 255);
+            font-size: 20px;
+        }
+
+        header {
+            background-color: rgb(255, 0, 255);
+            background: linear-gradient(180deg, rgb(183, 2, 255), rgb(245, 1, 245));
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+            flex: 1;
+        }
+
+        #bemVindo {
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #bemVindo p {
+            color: white;
+            font-size: 30px;
+        }
+
+        div#escurecer {
+            height: 100vh;
+            width: 100vw;
+            background-color: #3403506b;
+        }
+
+        div#admin {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div#admin input{
+            margin: 0;
+        }
+    </style>
+</head>
+<div id="escurecer">
+
+    <body>
+        <header>
+            <div id="admin">
+                <input type="text" id="senhaAdmin" placeholder="Digite a senha de admin">
+                <button onclick="admin()">Entrar</button>
+            </div>
+            <button onclick="logout()">Logout</button>
+        </header>
+        <div id="bemVindo">
+            <h1 id="titulo">Bem-vindo ao seu site de jogos favoritos!</h1>
+            <form action="">
+                <p id="mensagem">Prepare-se para aventuras épicas. Escolha seu jogo e divirta-se!</p>
+            </form>
+        </div>
+        <script src="../script/admin.js"></script>
+    </body>
+</div>
+
+</html>

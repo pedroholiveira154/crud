@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="_css/index.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('../images/fundo.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vw 100vh
+        }
+
+
+        center {
+            width: 100%;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-top: 40px;
+        }
+
+        p{
+            color: rgb(255, 255, 255);
+        }
+
+
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            /* text-align: left; */
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"] {
+            width: 250px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button,
+        input[type="button"] {
+            background-color: #791ce4;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        button:hover,
+        input[type="button"]:hover {
+            background-color: #366cd3;
+        }
+
+        thead {
+            background-color: #4a82f0;
+            color: white;
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            margin: 15px;
+            text-decoration: none;
+            background: #9a38d359;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        div#escurecer {
+            overflow: hidden;
+            height: 100%;
+            width: 100vw;
+            background-color: #3403506b;
+        }
+        input:focus {
+            border-color: #9226d1;
+            outline: none;
+        }
+
+        header {
+            background-color: rgb(255, 0, 255);
+            background: linear-gradient(180deg, rgb(183, 2, 255), rgb(245, 1, 245));
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+            flex: 1;
+            height: 8vh;
+        }
+        a {
+            color: #e204ff;
+            text-decoration: none;
+            margin: 0px 0px 20px 10px;
+            font-weight: bolder;
+            font-size: 20px;
+            transition: 0.2s;
+        }
+
+        a:hover {
+            text-decoration: none;
+            text-shadow: 10px 5px 15px rgb(255, 0, 255);
+            font-size: 24px;
+        }
+
+        p{
+            font-size: 19px;
+            font-weight: bold;
+            color: #ffff;
+        }
+    </style>
+</head>
+<div id="escurecer">
+
+    <body>
+        <center>
+            <header></header>
+            <h1>POST</h1>
+            <form>
+                <label for="">Nome:</label><br>
+                <input type="text" id="nome">
+                <br><br>
+                <label for="">Sobrenome:</label><br>
+                <input type="text" id="sobrenome">
+                <br><br>
+                <label for="">CPF:</label><br>
+                <input type="text" id="identificadorCPF">
+                <br><br>
+                <label for="">Email:</label><br>
+                <input type="text" id="email">
+                <br><br>
+                <label for="">Senha:</label><br>
+                <input type="password" id="senha">
+                <br><br>
+                <label for="">Rua:</label><br>
+                <input type="text" id="rua">
+                <br><br>
+                <label for="">CEP:</label><br>
+                <input type="text" id="cep">
+                <br><br>
+                <label for="">Cidade:</label><br>
+                <input type="text" id="cidade">
+                <br><br>
+                <label for="">Estado:</label><br>
+                <input type="text" id="estado">
+                <br><br>
+                <label for="">Telefone:</label><br>
+                <input type="text" id="telefone">
+                <br><br>
+                <button onclick="enviarDados()">Enviar</button>
+            </form><br>
+            <p>Já tem um cadastro?<b><a href="../index.html">Clique aqui!</a></b></p>
+            <script src="../script/post.js"></script>
+    </body>
+</div>
+
+</html>
